@@ -5,13 +5,22 @@
     <div class="row">
         <div class="col-md-4">
             <h2>Enter the user name</h2>
-            <input type="text" placeholder="obay madini">
-            <button type="submit" class="btn btn-primary" ng-click="vm.searchGitHub()">Search for Repos!</button>
+            <input type="text" id="repoInput" placeholder="obay madini">
+            <button type="submit" class="btn btn-primary" ng-click="vm.checkUser()">Search for Repos!</button>
         </div>
         <div class="col-md-8">
-            <ul id="repos" ng-repeat="repo in vm.repos">
-                <li><a href={{repo.url}}>{{repo.name}}</a></li>
-            </ul>
+            
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Repo Name</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="repo in vm.repos">
+                <td><strong>{{repo.name}}</strong></td><td><a href="{{repo.url}}"><button ng-click="vm.removeParty(party)" class='btn btn-primary visit'>Visit {{repo.name}}</button></a></td>
+            </tr>
+        </table>
         </div>
         
     </div>

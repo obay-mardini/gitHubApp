@@ -9,7 +9,21 @@
         var vm = this;
         vm.name = 'obay'
         vm.searchGitHub = searchGitHub;
-        vm.addRepo = addRepo;
+        vm.checkUser = checkUser;
+        
+        function checkUser() {
+            $.get('https://api.github.com/users/' + $('#repoInput').val(), function(result) {
+                console.log(result.login)
+                if(result.message === "Not Found") {
+                    //return error under the input
+                } else if(result.login) {
+                    console.log('here');
+                    vm.searchGitHub();
+                } else {
+                    //return api does not response
+                }
+            }); 
+        }
         
         function searchGitHub() {
             $.get('https://api.github.com/users/goeuro/repos', function(repos) {
@@ -18,11 +32,6 @@
                 });
             });        
         }
-        
-        function addRepo(data) {
-            data.forEach(function(repo){
-                $repos.append(repo.name)
-            });
-        }
+
     }
 })();

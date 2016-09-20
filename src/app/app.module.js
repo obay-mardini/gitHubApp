@@ -2,11 +2,10 @@
   'use strict';
 
   angular
-    .module('app', [])
+    .module('app', [
+      'ngRoute',
+      'app.landing'
+  ]);
    
-    .controller('MyController', MyController);
     
-    function MyController($scope) {
-        $scope.message = "hello world";
-    }
 })();

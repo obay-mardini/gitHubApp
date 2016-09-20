@@ -2,21 +2,26 @@
 <html lang="en" ng-app="app">
     <head>
         <meta charset="utf-8">
-        <titleGitHub</title>
+        <title>GitHub</title>
+        <!--Bootstrap latest compiled and minified CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <!--custom css -->
         <link rel="stylesheet" href="content/css/app.css"> </head>
-    <body >
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-        <script src="app/app.module.js"></script>
+    <body>
         
+        <!-- main view -->
+        <ng-view></ng-view>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>     
+        <script src="https://code.angularjs.org/1.5.0/angular-route.js"></script>
+        
+        <!-- Main Module -->
+         <script src="app/app.module.js"></script>
+
         <!-- landing -->
         <script src='app/landing/landing.module.js'></script>
         <script src="app/landing/config.route.js"></script>
-        
-        <div ng-controller="MyController">
-            {{message}}
-            
-        </div>
+        <script src="app/landing/landing.controller.js"></script>
     </body>
 
 </html>

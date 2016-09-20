@@ -6,16 +6,11 @@
         <div class="col-md-4">
             <h2>Enter the user name</h2>
             <input type="text" placeholder="obay madini">
-            <button type="submit" class="btn btn-primary">Search for Repos!</button>
+            <button type="submit" class="btn btn-primary" ng-click="vm.searchGitHub()">Search for Repos!</button>
         </div>
         <div class="col-md-8">
-            <ul >
-                <li><a>{{vm.name}}</a></li>
-                <li><a>landing page</a></li>
-                <li><a>landing page</a></li>
-                <li><a>landing page</a></li>
-                <li><a>landing page</a></li>
-                <li><a>landing page</a></li>
+            <ul id="repos" ng-repeat="repo in vm.repos">
+                <li><a href={{repo.url}}>{{repo.name}}</a></li>
             </ul>
         </div>
         

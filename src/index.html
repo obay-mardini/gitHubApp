@@ -3,18 +3,20 @@
     <head>
         <meta charset="utf-8">
         <title>GitHub</title>
-        <!--Bootstrap latest compiled and minified CSS-->
+        <!--Bootstrap compiled and minified CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <!--custom css -->
-        <link rel="stylesheet" href="content/css/app.css"> </head>
-    <body>
-        
-        <!-- main view -->
-        <ng-view></ng-view>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="content/css/app.css">
+        <!-- Angular and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>     
         <script src="https://code.angularjs.org/1.5.0/angular-route.js"></script>
-        
+    </head>
+    
+    <body>
+        <!-- main view -->
+        <ng-view></ng-view>
+                
         <!-- Main Module -->
          <script src="app/app.module.js"></script>
 
@@ -22,6 +24,12 @@
         <script src='app/landing/landing.module.js'></script>
         <script src="app/landing/config.route.js"></script>
         <script src="app/landing/landing.controller.js"></script>
+        
+        <!-- testing -->
+        <script src='app/test/testing.module.js'></script>
+        <script src="app/test/config.route.js"></script>
+        <script src="app/test/testing.controller.js"></script>
+        <script type="text/javascript" src="app/qunit/qunit.js"></script>
     </body>
 
 </html>

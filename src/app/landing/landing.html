@@ -2,13 +2,15 @@
     <div class="starter-template">
         <h1>GitHub Repositories</h1>
     </div>
+    </br>
     <div class="row">
         <div class="col-md-4">
             <h2>Enter the user name</h2>
-            <input type="text" id="repoInput" placeholder="obay madini">
-            <button type="submit" class="btn btn-primary" ng-click="vm.checkUser()">Search for Repos!</button>
+            <input type="text" id="repoInput" placeholder="obay madini" value="obay-mardini">
+            <button type="submit" class="btn btn-primary" ng-click="vm.getGitData()">Search for Repos!</button>
+            <p ng-show="vm.error" class="text-danger" ng-bind="vm.error"></p>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 repos">
             
         <table class="table table-striped table-bordered">
             <thead>
@@ -18,7 +20,7 @@
                 </tr>
             </thead>
             <tr ng-repeat="repo in vm.repos">
-                <td><strong>{{repo.name}}</strong></td><td><a href="{{repo.url}}"><button ng-click="vm.removeParty(party)" class='btn btn-primary visit'>Visit {{repo.name}}</button></a></td>
+                <td><strong>{{repo.name}}</strong></td><td><a href="{{repo.url}}"><button ng-click="vm.removeParty(party)" class='btn btn-primary visit'>{{repo.name}}</button></a></td>
             </tr>
         </table>
         </div>

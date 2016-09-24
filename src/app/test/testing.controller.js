@@ -18,7 +18,7 @@
         asyncTest("The user has repo(s)  ", function(){
              window.myControllers.searchGitHub({login:'obay-mardini'}).then(function(val){
                  start();
-                  return equals(val, '10', 'Done');
+                  return equals(val, '11', 'Done');
              })
            
         });   

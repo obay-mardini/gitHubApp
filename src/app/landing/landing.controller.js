@@ -42,7 +42,7 @@
                     reject("user name shouldn't have a space"); 
                 });
             } else {
-                return $.get('https://api.github.com/users/' + user;
+                return $.get('https://api.github.com/users/' + user);
             }
             
         }

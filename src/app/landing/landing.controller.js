@@ -11,7 +11,6 @@
     };
     
     function LandingController($scope) {
-        var scope = $scope;
         var vm = this;
         
         vm.getGitData = getGitData;
